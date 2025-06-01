@@ -27,7 +27,7 @@ def evaluate(bst, d_train, y_train, d_valid, y_valid, plot=True):
 
     start = time.time()
 
-    # Training set
+    # Training 
     y_train_predicted = bst.predict(d_train)
     fpr, tpr, thresholds = metrics.roc_curve(y_train.values, y_train_predicted)
     precision, recall, thresholds = metrics.precision_recall_curve(y_train.values, y_train_predicted)
