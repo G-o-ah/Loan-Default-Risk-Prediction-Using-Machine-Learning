@@ -57,7 +57,7 @@ def evaluate (clf, X_train, y_train, X_valid, y_valid, plot=True):
 
     start = time.time()
 
-    # Training set    
+    # Training   
     y_train_predicted = clf.predict_proba(X_train)
     fpr, tpr, thresholds = metrics.roc_curve(y_train, y_train_predicted[:,1])
     precision, recall, thresholds = metrics.precision_recall_curve(y_train, y_train_predicted[:,1])
